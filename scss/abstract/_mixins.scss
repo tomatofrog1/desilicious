@@ -1,0 +1,65 @@
+@mixin centerAll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+@mixin between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+// for bg image
+@mixin bgImgSize{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@mixin imgFit($width: 300px, $height: 300px){
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    object-position: center center;
+}
+
+@mixin grid($cols, $gap){
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $gap;
+}
+
+// responsive (with specific val)
+
+$mobile: 400px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@mixin mobile{
+    @media (min-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width: #{$mobile}) and (max-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin desktop{
+    @media (min-width: #{$tablet}) and (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+// withoutt specific value
+@mixin mediaQuery($width){
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
