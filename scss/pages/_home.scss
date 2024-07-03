@@ -44,6 +44,9 @@
         img{
             width: 17rem;
         }
+        @include mediaQuery(520px){
+            grid-template-columns: 1fr;
+        }
     }
     &__card{
         text-align: center;
@@ -61,6 +64,7 @@
             margin-bottom: 2rem;
         }
     }
+    
 }
 
 .homeAbout{
@@ -86,10 +90,16 @@
         p{
             margin-bottom: 2rem;
         }
+        br{
+            display: none;
+        }
     }
     &__wrapper{
         @include grid(2, 1rem);
         justify-items: center;
+        @include mediaQuery(520px){
+            grid-template-columns: 1fr;
+        }
     }
     &__content{
         ul{
@@ -113,11 +123,19 @@
         background: linear-gradient(rgba(0,0,0, 0.5),rgba(0,0,0, 0.5)), url(../../IMG/book\ a\ table\ bg.jpg);
         @include bgImgSize;
         height: 120vh;
+        @include mediaQuery(520px){
+            background: none;
+            height: auto;
+        }
     }
     &__table{
         padding: 5rem;
         width: 60rem;
         height: 45rem;
+        @include mediaQuery(520px){
+            width: 100rem;
+            padding: 0;
+        }
         h4{
             font-size: 2rem;
         }
@@ -187,6 +205,32 @@
 .video{
     &__wrapper{
         @include centerAll;
+        
     }
 }
 
+// home blog 
+.homeBlog{
+    &__title{
+        @include centerAll;
+        flex-direction: column;
+        padding-bottom: 2rem
+    }
+    &__wrapper{
+        @include grid(3, 1fr);
+        @include mediaQuery(520px){
+            grid-template-columns: 1fr;
+            justify-content: center;
+            gap: 3rem;
+        }
+        .blogContent{
+            
+            width: 25rem;
+            img{
+                width: 25rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    
+}

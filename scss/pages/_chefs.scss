@@ -1,0 +1,32 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.chefs{
+    padding: 10rem 0 5rem 0;
+    background-color: $clr--primary;
+    h2{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    &__wrapper{
+        @include grid(4, 3rem);
+        @include mediaQuery(520px){
+            grid-template-columns: 1fr;
+        }
+        &__card{
+            text-align: center;
+            img{
+                width: 16rem;
+                border-radius: 1.5rem;
+            }
+            h3{
+                font-size: 1.5rem;
+            }
+            p{
+                color: $clr--secondary;
+                font-weight: 600;
+            }
+        }
+    }
+}

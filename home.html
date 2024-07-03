@@ -4,39 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desilicious</title>
+    <!-- sass -->
     <link rel="stylesheet" href="./dist/css/main.min.css" />
+    <!-- font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <!-- sliider -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
     />
+    <!-- animation -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header bg--dark position--fixed">
+    <header class="header bg--dark">
       <div class="container">
         <div class="header__wrapper">
           <img src="./IMG/81240106-logo1.png" alt="" />
           <nav>
             <ul class="header__nav">
-              <li><a href="">Home</a></li>
-              <li><a href="">Menu</a></li>
-              <li><a href="">Chefs</a></li>
-              <li><a href="">Product</a></li>
+              <li><a href="./home.html">Home</a></li>
+              <li><a href="./menu.html">Menu</a></li>
+              <li><a href="./chefs.html">Chefs</a></li>
+              <li><a href="./products.html">Product</a></li>
               <li><a href="">Blog</a></li>
               <li><a href="">Contact</a></li>
             </ul>
           </nav>
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
     <!-- BANNER -->
-    <section class="homeBanner bg--dark">
+    <section class="homeBanner bg--dark ">
       <div class="container">
-        <div class="homeBanner__wrapper">
+        <div class="homeBanner__wrapper animate__animated animate__fadeInDown">
           <h4>IRRESISTIBLY GOOD</h4>
           <h1>The Rich Taste of Indian Flavors</h1>
           <p class="mb--3">
@@ -198,10 +211,10 @@
       </div>
     </section>
     <!-- BOOK A TABLE -->
-    <section class="booking">
+    <section class="booking  bg--primary">
       <div class="container">
         <div class="booking__wrapper">
-          <div class="booking__table bg--primary">
+          <div class="booking__table">
             <h4 class="text--secondary t-align--center mb--2">
               . Book A Table .
             </h4>
@@ -301,17 +314,17 @@
           </div>
         </div>
         <div class="testimonial__controls" id="controls">
-            <a class="prev"><i class="fa-solid fa-chevron-left"></i></a>
-            <a class="next"><i class="fa-solid fa-chevron-right"></i></a>
+          <a class="prev"><i class="fa-solid fa-chevron-left"></i></a>
+          <a class="next"><i class="fa-solid fa-chevron-right"></i></a>
         </div>
       </div>
     </section>
 
     <!-- VIDEO -->
-     <section class="video bg--primary py--5">
-        <div class="container">
-            <div class="video__wrapper">
-                <iframe
+    <section class="video bg--primary py--5">
+      <div class="container">
+        <div class="video__wrapper">
+          <iframe
             width="1000"
             height="500"
             src="https://www.youtube.com/embed/qVMc30aoMcQ?si=liPtqjaWVmbbOGky"
@@ -321,15 +334,101 @@
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
-
-            </div>
         </div>
-     </section>
+      </div>
+    </section>
 
+    <!-- HOME BLOG -->
+    <section class="homeBlog bg--primary py--5">
+      <div class="container">
+        <div class="homeBlog__title">
+          <h2 class="title-2">From Our Blog</h2>
+          <p>
+            Keep up with our latest food trends, new items, and other updates
+            and news from <br />
+            our fun blogs and articles that explore the world of Indian cuisine.
+          </p>
+        </div>
+        <div class="homeBlog__wrapper">
+          <div class="blogContent">
+            <img src="./IMG/ramen.png" alt="" />
+            <div class="blogContent__text">
+              <h3>An Indian Version Of Ramen</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
+                impedit consectetur quas consequatur ea natus, aut inventore.
+              </p>
+            </div>
+          </div>
+          <div class="blogContent">
+            <img src="./IMG/pasta.jpg" alt="" />
+            <div class="blogContent__text">
+              <h3>An Indian Version Of Ramen</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
+                impedit consectetur quas consequatur ea natus, aut inventore.
+              </p>
+            </div>
+          </div>
+          <div class="blogContent">
+            <img src="./IMG/chicken at home.jpg" alt="" />
+            <div class="blogContent__text">
+              <h3>An Indian Version Of Ramen</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
+                impedit consectetur quas consequatur ea natus, aut inventore.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
+    <!-- FOOTER -->
+    <footer class="footer bg--dark pt--5 py--5">
+      <div class="container">
+          <div class="footer__wrapper">
+              <ul>
+                  <li><img src="./IMG/81240106-logo1.png" alt=""></li>
+                  <li><span>Phone: </span>407-509-3646</li>
+                  <li><span>Mail:</span>sketchix@support.com</li>
+                  <li><span>Address:</span>16122 Collins Street West Victoria 8265 Australia</li>
+              </ul>
+              <ul>
+                  <li class="mb--2"><h4>Useful Links</h4></li>
+                  <li>About Us</li>
+                  <li>Food Menu</li>
+                  <li>My Account</li>
+                  <li>List an Item</li>
+              </ul>
+              <ul>
+                  <li class="mb--2"><h4>Community</h4></li>
+                  <li>Map</li>
+                  <li>Store Location</li>
+                  <li>Photography</li>
+                  <li>Games</li>
+                  <li>Music</li>
+              </ul>
+              <div class="footer__lastPart">
+                  <li class="mb--2"><h4>Community</h4></li>
+                  <div class="footer__subscribe">
+                      <input type="text" placeholder="Your Email Address">
+                      <a href="" class="btn bg--footer">Subscribe</a>
+                  </div>
+                  <ul class="footer__social">
+                      <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                      <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                      <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                      <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <p class="t-align-center mt--2">©Copyright 2022. Powered by WPDeveloper</p>
+      </div>
+   </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/toggleMenu.js"></script>
   </body>
 </html>

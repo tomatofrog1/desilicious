@@ -1,0 +1,79 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.products{
+    &__wrapper{
+        padding: 5rem 10rem 10rem 0;
+       @include grid(2,2);
+       gap: 3rem;
+       @include mediaQuery(520px){
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 5rem 0;
+       }
+    }
+    &__cards{
+        @include grid(3, 1);
+        @include mediaQuery(520px){
+            grid-template-columns: 1fr;
+        }
+    }
+    &__card{
+        text-align: center;
+        padding: 2rem 1rem;
+        margin: 0 1rem 2rem 1rem;
+        border: 2px solid $clr--secondary;
+        border-radius: 2rem;
+        cursor: pointer;
+        p{
+            color: $clr--secondary;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        img{
+            width: 14rem;
+        }
+    }
+    &__category{
+        background-color: $clr--dark;
+        border-radius: 1rem;
+        padding: 2rem;
+        
+        h3{
+            padding: 1rem 0;
+            border-bottom: 2px solid $clr--light;
+            font-size: 1.5rem;
+        }
+        table{
+            margin-top: 1rem;
+            td{
+                padding: 0 3rem 1rem 0;
+            }
+            td:first-of-type{
+                padding-right: 2rem;
+            }
+
+        }
+    }
+    &__side{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .search{
+            background-color: $clr--dark;
+            padding: 1rem;
+            border-radius: 1rem;
+            @include between;
+            input{
+                background-color: transparent;
+                &::placeholder{
+                    font-family: $font-primary;
+                    color: $clr--light;
+                }
+                &:focus, &:enabled{
+                    color: $clr--light;
+                }
+            }
+        }
+    }
+}
