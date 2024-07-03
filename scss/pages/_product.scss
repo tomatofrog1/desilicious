@@ -4,7 +4,8 @@
 .products{
     &__wrapper{
         padding: 5rem 10rem 10rem 0;
-       @include grid(2,2);
+       display: flex;
+       justify-content: center;
        gap: 3rem;
        @include mediaQuery(520px){
         display: flex;
