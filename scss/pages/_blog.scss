@@ -1,3 +1,29 @@
 @use "../abstract/" as *;
 @use "../base/" as *;
 
+.blog {
+    &__wrapper{
+        @include centerAll;
+        flex-direction: column;
+        text-align: unset;
+        justify-content: unset;
+        gap: 3rem;
+    }
+    &__content{
+        width: 50rem;
+        @include mediaQuery(520px){
+            width: 25rem;
+        }
+        img{
+            border-radius: 2rem;
+        }
+        h2{
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+        p{
+            margin: 2rem 0;
+        }
+        
+    }
+}
